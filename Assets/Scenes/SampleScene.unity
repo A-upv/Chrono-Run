@@ -1612,10 +1612,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7877141ea21c8eb4ea0f910de842e109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprint: 0
-  speed: 1
+  statepc: 0
+  sprint: 5
+  speed: 2
   rotationspeed: 0
-  jumpspeed: 0
+  jumpspeed: 5
 --- !u!143 &1755909870
 CharacterController:
   m_ObjectHideFlags: 0

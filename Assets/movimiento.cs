@@ -61,11 +61,6 @@ public class movimiento : MonoBehaviour
 
        }
 
-       if(Input.GetKey(KeyCode.LeftShift)){
-         speed = speed * sprint;
-
-      }else{
-         speed = speed / sprint;
-      }
+      
    }
 }

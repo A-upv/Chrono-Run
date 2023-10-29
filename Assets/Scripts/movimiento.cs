@@ -6,10 +6,12 @@ using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 
-public class movimiento : MonoBehaviour
+public class movimiento_Jugador : MonoBehaviour
 {
     // Start is called before the first frame update
-    
+    public enum State{walk,sprint,maxState}
+
+    public State statepc = State.walk;
     public float sprint;
    public float speed;
    public float rotationspeed;
@@ -20,6 +22,7 @@ public class movimiento : MonoBehaviour
    private float originalStepOffset;
     void Start()
     {
+
        characterController = GetComponent<CharacterController>();
        originalStepOffset = characterController.stepOffset;
     }
@@ -48,11 +51,17 @@ public class movimiento : MonoBehaviour
             characterController.stepOffset = 0;
 
        }
-
+      
         Vector3 velocity = movementDirection * magnitude;
         velocity.y = ySpeed;
 
+        statepc = Cambio();
+
+         if(statepc == State.walk)
         characterController.Move(velocity * Time.deltaTime);
+
+        if(statepc == State.sprint)
+        characterController.Move(velocity * sprint * Time.deltaTime);
 
        if(movementDirection != Vector3.zero){
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
@@ -62,5 +71,13 @@ public class movimiento : MonoBehaviour
        }
 
       
+   }
+
+   public State Cambio(){
+      if(Input.GetKey(KeyCode.LeftShift)){
+      return State.sprint;
+      }else{
+         return State.walk;
+      }
    }
 }
