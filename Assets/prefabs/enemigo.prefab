@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 956832322304474243}
   - component: {fileID: 2951207869848237858}
   - component: {fileID: 8874628943338505345}
-  - component: {fileID: 5716758801077387100}
   - component: {fileID: 1282660445732452049}
   - component: {fileID: 5854865171214103631}
   - component: {fileID: 539891435495196461}
+  - component: {fileID: 5134857871808393561}
   m_Layer: 0
   m_Name: enemigo
   m_TagString: Untagged
@@ -87,20 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5716758801077387100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2923345632227397605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d01948a732164448b8d85cd09680245, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  target: {fileID: 0}
 --- !u!143 &1282660445732452049
 CharacterController:
   m_ObjectHideFlags: 0
@@ -175,3 +161,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5134857871808393561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2923345632227397605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d01948a732164448b8d85cd09680245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  target: {fileID: 0}
+  rb: {fileID: 539891435495196461}
