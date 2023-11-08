@@ -291,6 +291,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1282660445732452049, guid: d3b24ef65065a844c9e9654bf01c2b13, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2923345632227397605, guid: d3b24ef65065a844c9e9654bf01c2b13, type: 3}
       propertyPath: m_Name
       value: enemigo (1)
@@ -298,7 +302,7 @@ PrefabInstance:
     - target: {fileID: 5716758801077387100, guid: d3b24ef65065a844c9e9654bf01c2b13, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1755909867}
+      objectReference: {fileID: 1755909863}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -339,7 +343,7 @@ CapsuleCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -1396,6 +1400,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1282660445732452049, guid: d3b24ef65065a844c9e9654bf01c2b13, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2923345632227397605, guid: d3b24ef65065a844c9e9654bf01c2b13, type: 3}
       propertyPath: m_Name
       value: enemigo (2)
@@ -1403,7 +1411,7 @@ PrefabInstance:
     - target: {fileID: 5716758801077387100, guid: d3b24ef65065a844c9e9654bf01c2b13, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1755909867}
+      objectReference: {fileID: 1755909863}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1684,7 +1692,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41e10d1edddf16845b771d5c8cdfd573, type: 2}
+  - {fileID: 2100000, guid: f38745e4fb11c8c4cb8c4a4ece37568e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1808,7 +1816,7 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
@@ -1930,6 +1938,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1282660445732452049, guid: d3b24ef65065a844c9e9654bf01c2b13, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2923345632227397605, guid: d3b24ef65065a844c9e9654bf01c2b13, type: 3}
       propertyPath: m_Name
       value: enemigo
@@ -1938,7 +1950,8 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1755909867}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6286020438938051200, guid: d3b24ef65065a844c9e9654bf01c2b13, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Efollow : MonoBehaviour
 {
     public float speed = 1.0f;
-    public Transform target;
+    [SerializeField]public GameObject target;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +15,6 @@ public class Efollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        //transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
     }
 }
