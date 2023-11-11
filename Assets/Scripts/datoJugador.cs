@@ -8,7 +8,7 @@ public class datoJugador : MonoBehaviour
     public int dañoAJugador;
     public int vidaJugador;
     public Slider barraVidaJugador;
-
+   
     private void Update()
     {
         barraVidaJugador.value = vidaJugador;
@@ -18,10 +18,7 @@ public class datoJugador : MonoBehaviour
             print("Game Over");
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            vidaJugador -= dañoAJugador;
-        }
+        
     }
 }
 

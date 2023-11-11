@@ -11,25 +11,27 @@ public class movimiento_Jugador : MonoBehaviour
     // Start is called before the first frame update
     public enum State{walk,sprint,maxState}
 
+
     public State statepc = State.walk;
     public float sprint;
    public float speed;
    public float rotationspeed;
    public float jumpspeed;
 
-   private CharacterController characterController;
+   public CharacterController characterController;
    private float ySpeed;
    private float originalStepOffset;
     void Start()
     {
 
-       characterController = GetComponent<CharacterController>();
+       
        originalStepOffset = characterController.stepOffset;
     }
 
     // Update is called once per frame
     void Update()
     {
+      transform.position = characterController.transform.position;
        float horizontalInput = Input.GetAxis("Horizontal");
        float verticalInput = Input.GetAxis("Vertical");
 
@@ -64,6 +66,7 @@ public class movimiento_Jugador : MonoBehaviour
         characterController.Move(velocity * sprint * Time.deltaTime);
 
        if(movementDirection != Vector3.zero){
+            
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
 
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationspeed * Time.deltaTime);
