@@ -12,6 +12,8 @@ public class RecogerObjeto : MonoBehaviour
     private Vector3 escalaOriginal;
     private bool cercaDelObjeto = false;
 
+    public Item item;
+
     private void Start()
     {
         escalaOriginal = transform.localScale;
@@ -22,7 +24,7 @@ public class RecogerObjeto : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             cercaDelObjeto = true;
-            AjustarTama�o();
+            AjustarTamaño();
         }
     }
 
@@ -31,7 +33,7 @@ public class RecogerObjeto : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             cercaDelObjeto = false;
-            RestaurarTama�o();
+            RestaurarTamaño();
         }
     }
 
@@ -45,12 +47,12 @@ public class RecogerObjeto : MonoBehaviour
         }
     }
 
-    void AjustarTama�o()
+    void AjustarTamaño()
     {
         transform.localScale = escalaOriginal * escalaTamanyo;
     }
 
-    void RestaurarTama�o()
+    void RestaurarTamaño()
     {
         transform.localScale = escalaOriginal;
     }
@@ -65,6 +67,13 @@ public class RecogerObjeto : MonoBehaviour
 
     void Recoger()
     {
+        // Agrega el objeto al inventario del jugador
+        if (item != null)
+        {
+            Inventario.AgregarItem(item);
+        }
+
+        // Desactiva el objeto o realiza otras acciones según tus necesidades
         gameObject.SetActive(false);
     }
 }
