@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  seguimientoRango: 100
+  seguimientoRango: 10
   velocidadMovimiento: 5
   rb: {fileID: 0}
 --- !u!114 &-7028257067123784783
