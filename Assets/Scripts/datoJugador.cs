@@ -16,13 +16,29 @@ public class datoJugador : MonoBehaviour
         {
             print("Game Over");
         }
-   
-        
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            EnemyScript enemyScript = other.GetComponent<EnemyScript>();
+
+            if (enemyScript != null)
+            {
+                recibirDano(10);
+            }
+        }
+    }
+
+    public void recibirDano(float dmg)
+    {
+        vidaJugador = vidaJugador - dmg;
+    }
+
 
     public float damage(float dmg){
        return vidaJugador -= dmg;
-        
     }
 }
 
