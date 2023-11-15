@@ -22,12 +22,7 @@ public class datoJugador : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            EnemyScript enemyScript = other.GetComponent<EnemyScript>();
-
-            if (enemyScript != null)
-            {
-                recibirDano(10);
-            }
+            recibirDano(10);
         }
     }
 
