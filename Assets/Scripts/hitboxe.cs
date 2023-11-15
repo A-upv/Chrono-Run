@@ -10,13 +10,11 @@ public class hitboxe : MonoBehaviour
 
     private float itime;
     public Vector3 knockback;
-    
-    // Start is called before the first frame update
    
-    public datoJugador dato;
+    public DatosJugador dato;
     void Start(){
         
-        dato = barravida.GetComponent<datoJugador>();
+        dato = barravida.GetComponent<DatosJugador>();
         
     }
 
@@ -28,10 +26,8 @@ public class hitboxe : MonoBehaviour
         print(other.tag);
          if(other.tag == "enemy"){
             print(other.tag);
-            print( dato.damage(dmg));
-            dato.damage(dmg);
+            dato.recibirDano(dmg);
             transform.position = transform.position + knockback;
-          
          }
     }
     
