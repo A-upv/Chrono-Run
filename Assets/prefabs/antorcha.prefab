@@ -234,6 +234,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3097982982106244ea500abed4707974, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d13007e14e284c14791ced193b558d04, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 3097982982106244ea500abed4707974, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: eda033cfd91ee354babf80820c8b486c, type: 2}
     - target: {fileID: 919132149155446097, guid: 3097982982106244ea500abed4707974, type: 3}
       propertyPath: m_Name
       value: antorcha_madera
@@ -300,6 +308,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ae669ce112ff4484fab80c24b1496db8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 39d3c88f62c6eb9439d6311be698e0de, type: 2}
     - target: {fileID: 919132149155446097, guid: ae669ce112ff4484fab80c24b1496db8, type: 3}
       propertyPath: m_Name
       value: antorcha_llama
