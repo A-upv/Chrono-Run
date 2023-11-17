@@ -19,22 +19,6 @@ public class Efollow : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            datoJugador = other.GetComponent<DatosJugador>();
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            datoJugador = null;
-        }
-    }
-
     void Update()
     {
 

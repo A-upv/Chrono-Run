@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DatosJugador : MonoBehaviour
 {
     public float vidaJugadorInicial;
-    private float vidaActual;
+    public float vidaActual;
     public Slider barraVidaJugador;
    
     private void Start()
@@ -20,15 +20,6 @@ public class DatosJugador : MonoBehaviour
         //barraVidaJugador.value = vidaActual;
     }
 
-    void onTriggerEnter(Collider coll)
-    {
-        if (coll.CompareTag("MeleeEnemy"))
-        {
-            recibirDano(10);
-            Debug.Log("Daño recibido");
-        }
-    }
-
     public void recibirDano(float dmg)
     {
         vidaActual -= dmg;
@@ -38,7 +29,7 @@ public class DatosJugador : MonoBehaviour
         if (vidaActual <= 0)
         {
             //Código para la muerte
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
@@ -50,7 +41,6 @@ public class DatosJugador : MonoBehaviour
         {
             vidaActual = vidaJugadorInicial;
         }
-
         //barraVidaJugador.value = vidaActual;        
     }
 }

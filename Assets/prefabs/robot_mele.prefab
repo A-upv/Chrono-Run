@@ -129,6 +129,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e2a8886aa917a454096e86426240c666, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8603373856602184209}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e2a8886aa917a454096e86426240c666, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2142174662751925548}
   m_SourcePrefab: {fileID: 100100000, guid: e2a8886aa917a454096e86426240c666, type: 3}
 --- !u!1 &563892544302877694 stripped
 GameObject:
@@ -142,7 +145,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563892544302877694}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e1e0ad4c3c3acb4b80d506d71e2a2ae, type: 3}
   m_Name: 
@@ -262,3 +265,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: -4328221674928734265}
   target: {fileID: 9198118788809704801, guid: 0f15290c8e8f3d74298090381b225b50, type: 3}
+--- !u!114 &-2142174662751925548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563892544302877694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67272224f9711d446b8e7c6823272cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiempoEntreDano: 3
+  target: {fileID: 9198118788809704801, guid: 0f15290c8e8f3d74298090381b225b50, type: 3}
+  seguimientoRango: 10
+  velocidadMovimiento: 5

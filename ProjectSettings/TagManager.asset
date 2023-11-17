@@ -6,6 +6,7 @@ TagManager:
   tags:
   - enemy
   - MeleeEnemy
+  - PocVida
   layers:
   - Default
   - TransparentFX
