@@ -45,7 +45,9 @@ public class Efollow : MonoBehaviour
             direccionAlJugador.y = 0f; 
             direccionAlJugador.Normalize();
 
-            transform.Translate(direccionAlJugador * velocidadMovimiento * Time.deltaTime, Space.World);
+            //transform.Translate(direccionAlJugador * velocidadMovimiento * Time.deltaTime, Space.World);
+            rb.AddForce(direccionAlJugador * velocidadMovimiento * Time.deltaTime, ForceMode.Force);
+            
         }
     }
 }
