@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Efollow : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class Efollow : MonoBehaviour
     public float velocidadMovimiento = 5f; 
     private DatosJugador datoJugador;
 
-    public Rigidbody rb;
+    private Rigidbody rb;
 
     void Start()
     {
