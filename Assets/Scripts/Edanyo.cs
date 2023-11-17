@@ -8,6 +8,9 @@ public class Edanyo : MonoBehaviour
     private float tiempoSiguienteDano;
     private DatosJugador datoJugador;
 
+    public void Update()
+    {
+    }
 
     private void OnTriggerEnter(Collider other)
     {

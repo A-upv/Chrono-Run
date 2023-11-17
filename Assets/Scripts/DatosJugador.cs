@@ -20,12 +20,22 @@ public class DatosJugador : MonoBehaviour
         //barraVidaJugador.value = vidaActual;
     }
 
+    void onTriggerEnter(Collider coll)
+    {
+        if (coll.CompareTag("MeleeEnemy"))
+        {
+            recibirDano(10);
+            Debug.Log("Daño recibido");
+        }
+    }
+
     public void recibirDano(float dmg)
     {
         vidaActual -= dmg;
+        Debug.Log(vidaActual);
         //barraVidaJugador.value = vidaActual;
 
-        if(vidaActual <= 0)
+        if (vidaActual <= 0)
         {
             //Código para la muerte
             Destroy(gameObject);
