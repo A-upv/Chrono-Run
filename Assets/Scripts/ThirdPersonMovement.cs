@@ -13,14 +13,18 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public float jumpHeight = 3f; // Altura del salto
     public float gravity = -9.8f; // Gravedad
-
     private CharacterController controller;
     private Vector3 velocity;
-
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        // lock cursor:
+        Cursor.lockState = CursorLockMode.Locked;
+
+        // Ocultar cursor:
+        Cursor.visible = false;
+
     }
 
     void Update()
@@ -34,7 +38,7 @@ public class ThirdPersonMovement : MonoBehaviour
         MovePlayer(direction);
 
         // // Lógica de salto
-        if (Input.GetButtonDown("Jump") && controller.isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && controller.isGrounded)
         {
             Jump();
         }
@@ -61,7 +65,8 @@ public class ThirdPersonMovement : MonoBehaviour
 
     void Jump()
     {
-        velocity.y = Mathf.Sqrt(jumpHeight * -2f);
+        velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        Debug.Log("Jumppp");
     }
 
     void ApplyGravity()
