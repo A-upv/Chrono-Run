@@ -8,28 +8,34 @@ public class DatosJugador : MonoBehaviour
     public float vidaJugadorInicial;
     public float vidaActual;
     public Slider barraVidaJugador;
-   
+
+    public GameObject panelGameOver;
+
     private void Start()
     {
         vidaActual = vidaJugadorInicial;
-        //barraVidaJugador.value = vidaActual;
+        barraVidaJugador.value = vidaActual;
+
+        panelGameOver.SetActive(false);
     }
 
     private void Update()
     {
-        //barraVidaJugador.value = vidaActual;
+        barraVidaJugador.value = vidaActual;
     }
 
     public void recibirDano(float dmg)
     {
         vidaActual -= dmg;
         Debug.Log(vidaActual);
-        //barraVidaJugador.value = vidaActual;
+        barraVidaJugador.value = vidaActual;
 
         if (vidaActual <= 0)
         {
-            //Código para la muerte
+            //Cï¿½digo para la muerte
             //Destroy(gameObject);
+            panelGameOver.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
