@@ -32,8 +32,6 @@ public class DatosJugador : MonoBehaviour
 
         if (vidaActual <= 0)
         {
-            //C�digo para la muerte
-            //Destroy(gameObject);
             panelGameOver.SetActive(true);
             Time.timeScale = 0f;
         }
@@ -46,8 +44,7 @@ public class DatosJugador : MonoBehaviour
         if (vidaActual > vidaJugadorInicial)
         {
             vidaActual = vidaJugadorInicial;
-        }
-        //barraVidaJugador.value = vidaActual;        
+        }      
     }
 }
 

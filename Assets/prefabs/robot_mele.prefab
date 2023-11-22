@@ -164,8 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  seguimientoRango: 10
-  velocidadMovimiento: 5
+  seguimientoRango: 20
+  velocidadMovimiento: 10
 --- !u!114 &-7028257067123784783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,5 +279,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoEntreDano: 3
   target: {fileID: 9198118788809704801, guid: 0f15290c8e8f3d74298090381b225b50, type: 3}
-  seguimientoRango: 10
-  velocidadMovimiento: 5
+  seguimientoRango: 20
+  velocidadMovimiento: 10
